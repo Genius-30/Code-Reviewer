@@ -23,7 +23,7 @@ function App() {
   const reviewCode = async () => {
     setIsReviewing(true);
     const res = await axios.post(
-      "http://localhost:4000/api/ai/get-review",
+      `${import.meta.env.VITE_BACKEND_URL}/api/ai/get-review`,
       { code },
       {
         headers: {
@@ -41,7 +41,7 @@ function App() {
   };
 
   return (
-    <main className="h-screen w-full bg-zinc-900 flex gap-x-4 p-6">
+    <main className="h-full md:h-screen w-full bg-zinc-900 flex flex-col md:flex-row gap-x-4 p-6">
       <div className="left relative h-full basis-1/2 bg-zinc-950 rounded-xl overflow-hidden">
         <div className="code h-full w-full">
           <Editor
