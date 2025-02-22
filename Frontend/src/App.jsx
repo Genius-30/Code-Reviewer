@@ -41,7 +41,7 @@ function App() {
   };
 
   return (
-    <main className="h-full md:h-screen w-full bg-zinc-900 flex flex-col md:flex-row gap-x-4 p-6">
+    <main className="h-screen w-full bg-zinc-900 flex flex-col md:flex-row gap-2 md:gap-4 p-6">
       <div className="left relative h-full basis-1/2 bg-zinc-950 rounded-xl overflow-hidden">
         <div className="code h-full w-full">
           <Editor
